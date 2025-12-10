@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Página Inicial";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bem-vindo ao WebFamilyHome</h1>
+    <p class="lead">Gerencie usuários e grupos de forma simples.</p>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Usuários</h5>
+                <p class="card-text">Visualize, crie e edite usuários cadastrados.</p>
+                <a asp-controller="Users" asp-action="Index" class="btn btn-primary">Ir para Usuários</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Grupos</h5>
+                <p class="card-text">Gerencie os grupos e veja quais usuários pertencem a cada um.</p>
+                <a asp-controller="Groups" asp-action="Index" class="btn btn-success">Ir para Grupos</a>
+            </div>
+        </div>
+    </div>
+</div>

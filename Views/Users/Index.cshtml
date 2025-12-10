@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WebFamilyHome.Models.User>
+
+<h1>Usuários</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Grupo</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Username</td>
+                <td>@user.Group?.Name</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@user.Id">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@user.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Novo Usuário</a>

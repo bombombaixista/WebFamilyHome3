@@ -1,0 +1,14 @@
+﻿@model WebFamilyHome.Models.Group
+
+<h1>Excluir Grupo</h1>
+
+<div>
+    <h4>Você tem certeza que deseja excluir este grupo?</h4>
+    <p><strong>@Model.Name</strong></p>
+</div>
+
+<form asp-action="DeleteConfirmed">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
